@@ -25,8 +25,8 @@ int main()
         }
     }
 
-    printf("Peserta dengan skor tertinggi adalah %s\n", data[highest].name);
-    printf("dengan skor %d\n", data[highest].score);
+    printf("Peserta dengan skor tertinggi adalah %s dengan skor %d\n",
+           data[highest].name, data[highest].score);
 
     return 0;
 }
