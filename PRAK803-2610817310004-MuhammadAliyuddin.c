@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 struct Peserta
 {
@@ -13,14 +14,16 @@ int main()
 
     printf("Nama : ");
     fgets(data.name, sizeof(data.name), stdin);
+    data.name[strcspn(data.name, "\n")] = '\0';
 
     printf("Umur : ");
     scanf("%d", &data.age);
+
     printf("Skor : ");
     scanf("%d", &data.score);
 
     printf("Data Peserta:\n");
-    printf("Nama : %s", data.name);
+    printf("Nama : %s\n", data.name);
     printf("Umur : %d tahun\n", data.age);
     printf("Skor : %d\n", data.score);
 
